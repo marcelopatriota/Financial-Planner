@@ -12,7 +12,6 @@
     --color-primary-4: #ccba78;
     --color-primary-5: #daa520;
     --color-primary-6: #daa520;
-
     --color-neutral-0: #fff;
     --color-neutral-1: #1d1d1d;
 }
@@ -33,6 +32,7 @@ html {
 
 body {
     background-color: var(--color-primary-1);
+    line-height: 1.6; /* ajuste conforme o h1 */
 }
 
 section {
@@ -98,3 +98,77 @@ section {
 .versalete {
     font-variant: small-caps;
   }
+
+.p {
+    margin-bottom: 20px;
+} 
+
+.p, li {
+    line-height: 1.8;
+  }
+
+/* Layout padrão: lado a lado */
+.container {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* aplica o alinhamento padrão */
+.container,
+h2 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.texto {
+  width: 50%;
+  text-align: justify;
+  padding-right: 20px;
+}
+
+.imagem {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items : center;
+  gap: 20px;
+}
+
+.imagem img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .texto,
+  .imagem {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+  }
+
+  /* mantém alinhamento no mobile também */
+  h2 {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.alinhamento-padrao {
+  margin-left: 40px;   /* ajuste aqui conforme o alinhamento do seu título */
+  margin-right: 40px;
+}
