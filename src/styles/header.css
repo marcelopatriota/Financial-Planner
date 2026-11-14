@@ -22,16 +22,15 @@ header {
     display: flex;
     align-items: center;
     text-decoration: none;
-    height: 48px; /* Controla a altura máxima do bloco do logo */
+    height: 75px; /* Altura aumentada. Ajuste este número para cima ou para baixo conforme o volume desejado */
 }
 
 .brand-logo {
-    height: 100%; /* Faz a imagem respeitar a altura do bloco */
-    width: auto;  /* Mantém a proporção largura-altura do logo */
+    height: 100%; 
+    width: auto;  
     object-fit: contain;
     transition: transform 0.3s ease;
 }
-
 .brand-logo:hover {
     transform: scale(1.02); /* Leve efeito de destaque ao passar o mouse */
 }
