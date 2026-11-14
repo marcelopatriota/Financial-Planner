@@ -69,17 +69,16 @@ $(document).ready(function() {
         sr.reveal('.book-card', { delay: 300, origin: 'bottom', interval: 200 });
     });
 
-    // Animações da Seção Inicial (Hero)
-    sr.reveal('#cta .title', { delay: 200, origin: 'bottom' });
-    sr.reveal('#cta .description', { delay: 400, origin: 'bottom' });
-    sr.reveal('#cta_buttons', { delay: 600, origin: 'bottom' });
-    sr.reveal('#banner img', { delay: 800, origin: 'right', distance: '100px' });
-
     // Animações Intercaladas (Textos e Imagens da área "O Processo")
     sr.reveal('h2', { delay: 200, origin: 'top', distance: '30px' });
     sr.reveal('.texto', { delay: 300, origin: 'left', distance: '60px' });
     sr.reveal('.imagem', { delay: 400, origin: 'right', distance: '60px' });
     
+    // Animações da Biblioteca, Audible e Kindle
+    sr.reveal('.book-card', { delay: 300, origin: 'bottom', interval: 200 });
+    sr.reveal('.audible-banner', { delay: 500, origin: 'bottom', distance: '40px' });
+    sr.reveal('.kindle-banner', { delay: 600, origin: 'bottom', distance: '40px' });
+
     // Animação do Rodapé
     sr.reveal('footer', { delay: 200, origin: 'bottom', distance: '40px' });
 });
