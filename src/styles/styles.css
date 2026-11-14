@@ -410,6 +410,77 @@ img {
     width: auto !important;
     object-fit: contain;
 }
+
+/* =========================================
+   BANNER AUDIBLE (AUDIOLIVROS)
+   ========================================= */
+
+.audible-banner {
+    margin-top: 60px;
+    background: linear-gradient(135deg, var(--color-primary-2) 0%, var(--color-primary-1) 100%);
+    border: 1px solid var(--color-primary-5);
+    border-radius: 16px;
+    padding: 45px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.audible-content {
+    position: relative;
+    z-index: 2;
+}
+
+.audible-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--color-neutral-1);
+}
+
+.audible-content p {
+    font-size: 1rem;
+    color: var(--color-neutral-0);
+    margin-bottom: 30px;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+/* Ícone gigante atuando como marca d'água de fundo */
+.audible-icon {
+    font-size: 12rem;
+    color: rgba(212, 175, 55, 0.05);
+    position: absolute;
+    right: -20px;
+    bottom: -40px;
+    z-index: 1;
+    transform: rotate(-10deg);
+}
+
+.audible-content .btn-default {
+    display: inline-flex;
+    width: auto;
+}
+
+/* 📱 Responsivo para o Banner do Audible */
+@media (max-width: 768px) {
+    .audible-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 25px;
+    }
+    
+    .audible-content .btn-default {
+        width: 100%;
+    }
+    
+    .audible-icon {
+        display: none; 
+    }
+}
 /* =========================================
    BANNER KINDLE (E-READER)
    ========================================= */
