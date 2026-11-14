@@ -258,3 +258,126 @@ h2 {
   margin-left: 40px;
   margin-right: 40px;
 }
+/* =========================================
+   SEÇÃO: BIBLIOTECA DO PLANEJADOR (AMAZON)
+   ========================================= */
+
+#biblioteca {
+    padding: 60px 8%;
+    background-color: var(--color-primary-1);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.biblioteca-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.biblioteca-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.biblioteca-header p {
+    color: var(--color-neutral-0);
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Grid de Livros */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Card Individual */
+.book-card {
+    background-color: var(--color-primary-2); /* Azul mais claro para destacar do fundo */
+    border-radius: 16px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Placeholder para a Capa do Livro */
+.book-image-placeholder {
+    width: 140px;
+    height: 200px;
+    background-color: rgba(212, 175, 55, 0.1);
+    border: 1px dashed var(--color-primary-5);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: var(--color-primary-5);
+    font-size: 2.5rem;
+}
+
+/* Se você adicionar a tag <img> real do livro no futuro, use esta classe: */
+.book-card img {
+    width: 140px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px;
+}
+
+/* Informações do Livro */
+.book-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.book-info span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-primary-5);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.book-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Empurra o botão sempre para o final do card */
+}
+
+/* Botão da Amazon */
+.btn-amazon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid var(--color-primary-5);
+    color: var(--color-primary-5);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-amazon:hover {
+    background-color: var(--color-primary-5);
+    color: var(--color-primary-1);
+}
