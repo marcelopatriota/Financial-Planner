@@ -1,27 +1,36 @@
+/* Estilo Base do Rodapé */
 footer {
-
-    CSS
-footer {
-    background-color: var(--color-primary-1); /* Garante que o fundo do footer é o azul escuro */
-    border-top: 4px solid var(--color-primary-5); /* Cria uma linha dourada elegante no lugar da onda */
-    /* ou use border-top-left-radius: 50px; border-top-right-radius: 50px; se quiser manter um formato curvo */
+    background-color: var(--color-primary-1); /* Fundo Azul Marinho */
+    border-top: 4px solid var(--color-primary-5); /* Borda Dourada Elegante */
+    padding-top: 30px; /* Dá um respiro entre a linha dourada e o texto do aviso legal */
 }
 
+/* Container que segura o Copyright e os Botões Sociais */
 #footer_items {
     display: flex;
     justify-content: space-between;
-    padding: 0px 8% 24px 8%;
+    padding: 24px 8%;
     align-items: center;
 }
 
+/* Texto do Copyright */
 #copyright {
-    color: var(--color-neutral-1);
-    font-weight: 500;
+    color: var(--color-neutral-0); /* Cinza claro, mais confortável para leitura em fundo escuro */
+    font-weight: 400; /* Font weight reduzido para não brigar com títulos */
+    font-size: 0.9rem;
 }
 
+/* 📱 Responsivo do Rodapé (Celulares) */
 @media screen and (max-width: 600px) {
     #footer_items {
         flex-direction: column;
         gap: 20px;
+        text-align: center; /* Centraliza o copyright no celular */
+    }
+    
+    /* Centraliza também os botões sociais no celular */
+    .social-media-buttons {
+        justify-content: center;
+        width: 100%;
     }
 }
