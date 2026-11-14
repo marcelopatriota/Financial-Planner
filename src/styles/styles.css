@@ -550,3 +550,105 @@ img {
         display: none;
     }
 }
+
+/* =========================================
+   SEÇÃO INSIGHTS E ARTIGOS
+   ========================================= */
+
+#insights {
+    padding: 80px 5%;
+    background-color: var(--color-neutral-0); /* Fundo principal escuro */
+}
+
+.insights-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.insights-header h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary-6);
+    margin-bottom: 15px;
+}
+
+.insights-header p {
+    color: var(--color-neutral-1);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.insight-card {
+    background-color: var(--color-primary-2);
+    border-left: 4px solid var(--color-primary-6); /* Linha dourada institucional */
+    border-radius: 0 12px 12px 0;
+    padding: 35px 30px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, border-left-width 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-5px);
+    border-left-width: 8px; /* A borda dourada engrossa ao passar o mouse */
+}
+
+.insight-tag {
+    display: inline-block;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--color-primary-6);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.insight-date {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-neutral-2);
+    margin-bottom: 10px;
+}
+
+.insight-card h3 {
+    font-size: 1.4rem;
+    color: var(--color-neutral-1);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.insight-card p {
+    font-size: 1rem;
+    color: var(--color-neutral-2);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-link {
+    color: var(--color-primary-6);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+    color: #FFF;
+}
+
+.insights-footer {
+    text-align: center;
+    margin-top: 20px;
+}
