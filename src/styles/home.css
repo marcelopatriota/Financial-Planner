@@ -1,108 +1,62 @@
+/* Estrutura Base da Primeira Tela */
 #home {
     display: flex;
-    min-height: calc(100vh - 91px);
+    min-height: calc(100vh - 90px);
     position: relative;
+    align-items: center; /* Centraliza verticalmente o texto e a imagem */
+    justify-content: space-between;
 }
 
+/* Bloco de Textos e Botões (Esquerda) */
 #cta {
-    width: 45%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 28px;
-    margin-top: 5%;
+    z-index: 2; /* Garante que o texto fique acima de qualquer elemento de fundo */
 }
 
+/* Tipografia de Impacto da Capa */
 #cta .title {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 4vw, 4rem); /* Texto adapta o tamanho à tela suavemente */
+    line-height: 1.2;
     color: var(--color-neutral-1);
 }
 
 #cta .title span {
-    color: var(--color-primary-6);
+    color: var(--color-primary-5); /* "VOCÊ" em Dourado */
 }
 
 #cta .description {
     font-size: 1.2rem;
+    color: var(--color-neutral-0);
+    max-width: 90%;
 }
 
-#cta_buttons {
-    display: flex;
-    gap: 24px;
-}
-
-#cta_buttons a {
-    text-decoration: none;
-    color: var(--color-neutral-1);
-}
-
-#phone_button {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    padding: 8px 14px;
-    font-weight: 500;
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-
-    white-space: nowrap;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-#phone_button span,
-#phone_button button {
-    font-size:clamp(1.7rem, 2vw, 1.1rem);
-    white-space: nowrap;
-    box-shadow: none;
-}
-
-#phone_button img{
-    width: clamp(16px, 3vw, 24px);
-    height: auto;
-}
-
+/* Imagem do Herói (Direita) */
 #banner {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 55%;
-    height: auto;
-    margin-left: auto;
+    justify-content: flex-end; /* Empurra a imagem para a direita */
+    width: 45%;
     position: relative;
     z-index: 2;
-    overflow: visible;
 }
 
 .logo-responsiva {
     max-width: 100%;
     height: auto;
-    transform: translate(10%, -120px);
-    /*transform: translateX(50px);*/
+    object-fit: contain;
+    /* Remover 'transform' força a imagem a respeitar a grade do Flexbox sem vazar da tela */
 }
 
-.shape {
-    background-color: var(--color-primary-4);
-    width: 50%;
-    height: 60%;
-    position: absolute;
-    border-radius: 100% 80% 100% 80%;
-    top: 0;
-    right: 0;
-    z-index: 0;
-}
-
+/* 📱 Responsivo da Primeira Tela (Celulares) */
 @media screen and (max-width: 1000px) {
     #home {
-        min-height: 100%;
-        padding-top: 0px;
-    }
-
-    #banner,
-    #banner img,
-    #home .shape {
-        display: none;
+        flex-direction: column;
+        min-height: 100vh;
+        padding-top: 40px;
+        justify-content: flex-start;
     }
 
     #cta {
@@ -110,15 +64,19 @@
         text-align: center;
         align-items: center;
     }
+
+    #cta .description {
+        max-width: 100%;
+    }
+
+    /* Mantém a imagem no mobile, mas joga ela para baixo do texto */
+    #banner {
+        width: 90%;
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .logo-responsiva {
+        max-height: 350px; /* Limita a altura para não engolir a tela no mobile */
+    }
 }
-
-@media screen and (max-width: 350px) {
-    #phone_button button {
-        display: 6px 10px;
-        gap: 6px;
-    }
-
-    #phone_button span,
-    #phone_button button {
-        font-size: clamp(0.6rem, 3vw, 0.9rem);}
-    }
