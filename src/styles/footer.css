@@ -1,5 +1,10 @@
 footer {
-    background-color: var(--color-primary-2);
+
+    CSS
+footer {
+    background-color: var(--color-primary-1); /* Garante que o fundo do footer é o azul escuro */
+    border-top: 4px solid var(--color-primary-5); /* Cria uma linha dourada elegante no lugar da onda */
+    /* ou use border-top-left-radius: 50px; border-top-right-radius: 50px; se quiser manter um formato curvo */
 }
 
 #footer_items {
