@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
 @import url('header.css');
 @import url('home.css');
 @import url('menu.css');
@@ -6,23 +6,19 @@
 @import url('footer.css');
 
 :root {
-    --color-primary-1: #ffffff;
-    --color-primary-2: #ffe8b4;
-    --color-primary-3: #ccba78;
-    --color-primary-4: #ccba78;
-    --color-primary-5: #daa520;
-    --color-primary-6: #daa520;
-    --color-neutral-0: #fff;
-    --color-neutral-1: #1d1d1d;
+    /* Paleta Premium Marcelo Patriota */
+    --color-primary-1: #0A192F; /* Fundo Azul Marinho */
+    --color-primary-2: #112240; /* Azul Secundário (para cards/seções) */
+    --color-primary-5: #D4AF37; /* Dourado Principal */
+    --color-primary-6: #C5A059; /* Dourado Escuro (hover) */
+    --color-neutral-0: #F3F4F6; /* Texto Claro (cinza quase branco) */
+    --color-neutral-1: #FFFFFF; /* Branco Puro para Títulos */
 }
 
 * {
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
-    font-weight:weight;
-    font-style: normal;
-    margin:0;
-    padding:0;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -32,9 +28,19 @@ html {
 
 body {
     background-color: var(--color-primary-1);
-    line-height: 1.6; /* ajuste conforme o h1 */
+    color: var(--color-neutral-0);
+    line-height: 1.8;
 }
 
+/* Padronização dos Títulos e Destaques */
+h1, h2, h3, .section-title, .section-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-neutral-1);
+}
+
+strong, span {
+    color: var(--color-primary-5);
+}
 section {
     padding: 28px 8%;
     scroll-margin-top: 120px;
@@ -46,16 +52,23 @@ section {
     align-items: center;
     justify-content: center;
     background-color: var(--color-primary-5);
-    border-radius: 12px;
-    padding: 10px 14px;
-    font-weight: 600;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    color: var(--color-primary-1); /* Texto azul escuro no botão dourado */
+    border-radius: 50px; /* Efeito "pílula" moderno */
+    padding: 14px 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.3);
     cursor: pointer;
-    transition: background-color .3s ease;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .btn-default:hover {
-    background-color: var(--color-primary-3);
+    background-color: var(--color-primary-6);
+    transform: translateY(-3px); /* Leve salto ao passar o mouse */
+    box-shadow: 0px 6px 20px rgba(212, 175, 55, 0.5);
 }
 
 .social-media-buttons {
@@ -145,27 +158,33 @@ h2 {
 
 /* 📱 Responsivo */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column-reverse;
-    align-items: center;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
+    .container {
+        flex-direction: column; /* Em vez de reverse, usamos coluna simples */
+        align-items: center;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
 
-  .texto,
-  .imagem {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 0;
-  }
+    /* Força a IMAGEM a ficar sempre no TOPO no celular, independente do HTML */
+    .imagem {
+        width: 100%;
+        order: 1; 
+        padding: 0;
+        margin-bottom: 20px;
+    }
 
-  /* mantém alinhamento no mobile também */
-  h2 {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+    /* Força o TEXTO a ficar sempre ABAIXO da imagem no celular */
+    .texto {
+        width: 100%;
+        order: 2;
+        padding: 0;
+        text-align: left; /* Textos justificados no mobile criam buracos (rios de espaço) ruins de ler */
+    }
+
+    h2 {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
 .alinhamento-padrao {
