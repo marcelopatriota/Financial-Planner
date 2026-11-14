@@ -66,6 +66,7 @@ $(document).ready(function() {
         duration: 1000,
         delay: 200,
         reset: false // false garante que a animação ocorra apenas na primeira leitura (estabilidade visual)
+        sr.reveal('.book-card', { delay: 300, origin: 'bottom', interval: 200 });
     });
 
     // Animações da Seção Inicial (Hero)
