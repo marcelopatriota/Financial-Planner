@@ -381,3 +381,32 @@ h2 {
     background-color: var(--color-primary-5);
     color: var(--color-primary-1);
 }
+/* =========================================
+   TRAVAS DE SEGURANÇA PARA IMAGENS
+   ========================================= */
+
+/* 1. Trava de segurança global (impede qualquer imagem de vazar da tela) */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 2. Trava absoluta para as Capas dos Livros na Biblioteca */
+.book-card img {
+    max-width: 140px !important; 
+    max-height: 220px !important; /* Limite de altura para manter o grid alinhado */
+    width: auto;
+    margin: 0 auto 25px auto !important; /* Centraliza a imagem no card */
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Trava de tamanho para as imagens das Etapas (O Processo) */
+.imagem img {
+    max-width: 100% !important;
+    max-height: 400px !important; /* Impede que imagens longas ocupem a tela toda no PC */
+    width: auto !important;
+    object-fit: contain;
+}
