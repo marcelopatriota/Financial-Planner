@@ -71,6 +71,7 @@ section {
     box-shadow: 0px 6px 20px rgba(212, 175, 55, 0.5);
 }
 
+/* Botões de Redes Sociais Premium */
 .social-media-buttons {
     display: flex;
     gap: 18px;
@@ -81,18 +82,34 @@ section {
     align-items: center;
     justify-content: center;
     width: 45px;
-    height: 40px;
-    background-color: var(--color-neutral-0);
+    height: 45px;
+    background-color: transparent; /* Remove o fundo branco */
+    border: 2px solid var(--color-primary-5); /* Borda Dourada */
+    color: var(--color-primary-5); /* Ícone Dourado */
     font-size: 1.25rem;
-    border-radius: 10px;
+    border-radius: 50%; /* Botão perfeitamente redondo */
     text-decoration: none;
-    color: var(--color-neutral-1);
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow .3s ease;
+    transition: all 0.3s ease;
 }
 
 .social-media-buttons a:hover {
-    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-primary-5); /* Preenche de dourado no hover */
+    color: var(--color-primary-1); /* Ícone fica azul marinho */
+    box-shadow: 0px 0px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Botão do Menu Hambúrguer (Celular) */
+#mobile_btn {
+    background-color: transparent;
+    color: var(--color-primary-5); /* Ícone Dourado */
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#mobile_btn:hover {
+    color: var(--color-primary-6);
 }
 
 .section-title {
