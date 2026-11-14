@@ -652,3 +652,133 @@ img {
     text-align: center;
     margin-top: 20px;
 }
+/* =========================================
+   PÁGINA DO ARTIGO (LEITURA PROFUNDA)
+   ========================================= */
+
+#article-page {
+    padding: 120px 5% 80px 5%; /* Espaço superior para não sobrepor o menu fixo */
+    background-color: var(--color-neutral-0);
+    min-height: 100vh;
+}
+
+.full-article {
+    max-width: 800px; /* Largura ideal para leitura humana sem cansar os olhos */
+    margin: 0 auto;
+    background-color: var(--color-primary-1);
+    padding: 60px 80px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.4);
+    border-top: 5px solid var(--color-primary-6);
+}
+
+.article-header {
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--color-primary-3);
+    padding-bottom: 30px;
+}
+
+.article-header h1 {
+    font-size: 2.8rem;
+    color: var(--color-neutral-1);
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.article-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-neutral-2);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.article-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary-2);
+    border: 2px solid var(--color-primary-6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-6);
+    font-size: 1.2rem;
+}
+
+.author-info strong {
+    display: block;
+    color: var(--color-neutral-1);
+    font-size: 1.1rem;
+}
+
+.author-info span {
+    color: var(--color-primary-6);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.article-body p {
+    font-size: 1.15rem;
+    color: var(--color-neutral-2);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.article-body h2 {
+    font-size: 1.8rem;
+    color: var(--color-neutral-1);
+    margin: 40px 0 20px 0;
+}
+
+.article-body strong {
+    color: var(--color-neutral-1);
+}
+
+.article-body blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--color-primary-6);
+    border-left: 4px solid var(--color-primary-6);
+    padding: 20px 30px;
+    margin: 40px 0;
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+    border-radius: 0 12px 12px 0;
+}
+
+.article-cta {
+    margin-top: 60px;
+    padding: 40px;
+    background-color: var(--color-primary-2);
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--color-primary-5);
+}
+
+.article-cta h3 {
+    color: var(--color-neutral-1);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.article-cta p {
+    color: var(--color-neutral-2);
+    margin-bottom: 30px;
+}
+
+/* 📱 Responsivo para o Artigo */
+@media (max-width: 768px) {
+    .full-article {
+        padding: 40px 20px;
+    }
+    
+    .article-header h1 {
+        font-size: 2.2rem;
+    }
+}
