@@ -59,15 +59,14 @@ $(document).ready(function() {
         $(navItems[activeSectionIndex]).addClass('active');
     });
 
-    // 4. Animações de Aparição Suave (ScrollReveal)
+// 4. Animações de Aparição Suave (ScrollReveal)
     const sr = ScrollReveal({
         origin: 'bottom',
         distance: '50px',
         duration: 1000,
         delay: 200,
-        reset: false // false garante que a animação ocorra apenas na primeira leitura (estabilidade visual)
-        sr.reveal('.book-card', { delay: 300, origin: 'bottom', interval: 200 });
-    });
+        reset: false // false garante que a animação ocorra apenas na primeira leitura
+    }); // <-- A chave fechada corretamente aqui!
 
     // Animações Intercaladas (Textos e Imagens da área "O Processo")
     sr.reveal('h2', { delay: 200, origin: 'top', distance: '30px' });
