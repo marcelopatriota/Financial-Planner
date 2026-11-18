@@ -1,43 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O impacto da Selic a 13,75% | Marcelo Patriotta</title>
-    
-    <!-- 1. Fontes do Google (Garante a tipografia High-Ticket idêntica à página inicial) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- 2. Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- 3. CSS do Projeto -->
-    <link rel="stylesheet" href="src/styles/styles.css?v=2">
-    <link rel="stylesheet" href="src/styles/header.css">
-    
-    <!-- 4. Scripts Base (jQuery é crucial para o menu mobile não quebrar a página) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+
+    <!-- Chart.js para o gráfico de evolução da Selic -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <title>O impacto da Selic a 13,75% na Dívida Pública - Marcelo Patriotta CFP®</title>
 </head>
 <body>
     
-    <!-- HEADER -->
+    <!-- CABEÇALHO IDÊNTICO AO INDEX.HTML -->
     <header>
         <nav id="navbar">
+            <!-- LOGO COM LINK PARA A HOME -->
             <a href="index.html#home" id="nav_logo">
-                <img src="src/images/logo-marcelo-patriotta.png" alt="Marcelo Patriotta - Planejador Financeiro CFP®" class="brand-logo">
+                <img src="src/images/logo.png" alt="Marcelo Patriotta - Planejador Financeiro CFP®" class="brand-logo">
             </a>
-            
+
             <ul id="nav_list">
-                <li class="nav-item"><a href="index.html#home">Início</a></li>
-                <li class="nav-item"><a href="index.html#menu">O Processo</a></li>
-                <li class="nav-item"><a href="index.html#planner">Sobre seu Planejador</a></li>
+                <li class="nav-item">
+                    <a href="index.html#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#menu">O Processo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#planner">Sobre seu Planejador</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="selic.html">Insights</a>
+                </li>
             </ul>
-            
-            <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none;">
-                Inicie sua jornada aqui
+
+            <a href="https://wa.me/5541996301116?text=Ol%C3%A1%2C%20Marcelo!%20Li%20seu%20artigo%20sobre%20a%20Selic%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+                Falar com o Planejador
             </a>
 
             <button id="mobile_btn">
@@ -47,83 +49,153 @@
 
         <div id="mobile_menu">
             <ul id="mobile_nav_list">
-                <li class="nav-item"><a href="index.html#home">Início</a></li>
-                <li class="nav-item"><a href="index.html#menu">O Processo</a></li>
-                <li class="nav-item"><a href="index.html#planner">Sobre Seu Planejador</a></li>
+                <li class="nav-item">
+                    <a href="index.html#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#menu">O Processo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#planner">Sobre Seu Planejador</a>
+                </li>
             </ul>
 
-            <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none; display: block; text-align: center; margin-top: 20px;">
-                Inicie sua Jornada
+            <a href="https://wa.me/5541996301116?text=Ol%C3%A1%2C%20Marcelo!%20Li%20seu%20artigo%20sobre%20a%20Selic." target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none; display: inline-block; text-align: center;">
+                Falar com o Planejador
             </a>
         </div>
     </header>
 
-    <!-- ÁREA DE LEITURA DO ARTIGO -->
-    <main id="article-page">
-        <article class="full-article">
-            
-            <header class="article-header">
-                <div class="article-meta">
-                    <span class="insight-tag">Macroeconomia</span>
-                    <span class="insight-date">Novembro 2026</span>
-                </div>
-                <h1>O impacto da Selic a 13,75% na composição da Dívida Pública e no seu Portfólio</h1>
-                <p class="article-subtitle">Uma análise sobre o prêmio de risco real, a atratividade dos títulos atrelados à inflação e por que a manchete do déficit não conta a história inteira.</p>
+    <!-- CONTEÚDO DO ARTIGO -->
+    <main id="content">
+        <section id="home" style="min-height: auto; padding-top: 40px; padding-bottom: 40px;">
+            <div style="max-width: 800px; margin: 0 auto; width: 100%;">
                 
-                <div class="article-author">
-                    <div class="author-avatar">
-                        <i class="fa-solid fa-user-tie"></i> 
-                    </div>
-                    <div class="author-info">
-                        <strong>Marcelo Patriotta</strong>
-                        <span>Planejador Financeiro CFP®</span>
+                <!-- Botão de Voltar -->
+                <div style="margin-bottom: 30px;">
+                    <a href="index.html#insights" style="text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-arrow-left"></i> Voltar para os Insights
+                    </a>
+                </div>
+
+                <!-- Cabeçalho do Artigo -->
+                <div style="margin-bottom: 40px;">
+                    <span class="insight-tag" style="display: inline-block; margin-bottom: 12px;">Macroeconomia</span>
+                    <span class="insight-date" style="margin-left: 10px; color: var(--color-neutral-dark);">Nov 2026 • 6 min de leitura</span>
+                    <h1 class="title" style="font-size: 2.2rem; line-height: 1.2; margin-top: 10px; margin-bottom: 20px;">
+                        O impacto da Selic a 13,75% na composição da Dívida Pública
+                    </h1>
+                    <p class="description" style="font-size: 1.1rem; line-height: 1.6;">
+                        Uma análise profunda sobre o prêmio de risco, títulos prefixados e o reflexo real no portfólio do investidor de longo prazo diante do patamar atual dos juros.
+                    </p>
+                </div>
+
+                <!-- Bloco Interativo / Gráfico da Selic -->
+                <div style="background: var(--color-neutral-light, #f8fafc); padding: 30px; border-radius: 16px; border: 1px solid rgba(0,0,0,0.06); margin-bottom: 40px;">
+                    <h3 style="margin-bottom: 15px; font-size: 1.2rem;">Evolução Histórica e Patamar Atual da Selic</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px; opacity: 0.8;">Acompanhamento do comportamento da taxa básica de juros e seu reflexo no custo de captação do governo.</p>
+                    <div style="position: relative; height: 320px; width: 100%;">
+                        <canvas id="selicChart"></canvas>
                     </div>
                 </div>
-            </header>
 
-            <div class="article-body">
-                <p>Quando a taxa Selic atinge o patamar de 13,75%, a reação imediata do investidor de varejo é migrar agressivamente para ativos atrelados ao CDI, buscando a segurança ilusória da rentabilidade nominal de curto prazo. No entanto, para estruturar um legado sólido, é imperativo olhar para os bastidores: a composição da dívida pública federal.</p>
+                <!-- Corpo do Texto -->
+                <div class="texto" style="font-size: 1.05rem; line-height: 1.8; color: var(--color-neutral-dark);">
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;">O Cenário de Juros Altos e a Dívida</h3>
+                    <p style="margin-bottom: 20px;">
+                        Quando a taxa Selic atinge patamares restritivos como 13,75%, o Tesouro Nacional enfrenta uma pressão imediata sobre o custo de rolagem da dívida pública federal. Como grande parte dos títulos é indexada à Selic (Tesouro Selic/LFT) ou pós-fixada, o custo de financiamento do Estado sobe na exata proporção da decisão do Copom.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        Isso gera um efeito composto: o prêmio de risco exigido pelo mercado secundário para absorver títulos prefixados (LTN e NTN-F) se eleva, refletindo as incertezas fiscais e a inflação esperada no horizonte relevante.
+                    </p>
 
-                <h2>A anatomia do endividamento federal</h2>
-                <p>Dados recentes do Banco Central confirmam a superação da barreira de R$ 1,2 trilhão em déficit. Mas o que realmente importa para a alocação de longo prazo é como essa dívida é financiada. Hoje, aproximadamente <strong>52% da dívida é pós-fixada (Selic)</strong>, 24% atrelada à inflação, 21% prefixada e 3% cambial.</p>
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;">O que isso significa para o seu portfólio?</h3>
+                    <p style="margin-bottom: 20px;">
+                        Para o investidor pessoa física, o momento exige serenidade e foco estratégico. Embora a renda fixa pós-fixada ofereça retribuições nominais elevadas de dois dígitos sem volatilidade diária significativa, concentrar 100% do patrimônio nessa classe pode ser uma armadilha de custo de oportunidade quando o ciclo de queda de juros eventualmente se iniciar.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        A construção de uma carteira robusta exige balanceamento: capturar taxas atrativas em prefixados ou híbridos (IPCA+) de longo prazo para blindar o poder de compra do <strong>eu do futuro</strong>, mantendo a liquidez necessária para imprevistos.
+                    </p>
 
-                <p>Esse desequilíbrio na base pós-fixada significa que o custo de rolagem do governo está no seu ápice histórico. A taxa de 13,75% não é apenas um instrumento de controle inflacionário; ela carrega embutido um severo prêmio de risco fiscal.</p>
+                    <blockquote style="border-left: 4px solid var(--color-primary, #1d4ed8); padding-left: 20px; margin: 30px 0; font-style: italic; opacity: 0.9;">
+                        "O investidor maduro não olha apenas para o rendimento nominal de hoje, mas para a consistência do seu planejamento ao longo dos ciclos econômicos." — Marcelo Patriotta, CFP®
+                    </blockquote>
+                </div>
 
-                <blockquote>
-                    "O verdadeiro teste de um portfólio não é o quanto ele rende no pico dos juros, mas como ele protege o poder de compra quando o ciclo inverte."
-                </blockquote>
+                <!-- Box de Chamada Final no Artigo -->
+                <div style="background: linear-gradient(135deg, #1e293b, #0f172a); color: white; padding: 35px; border-radius: 16px; margin-top: 50px; text-align: center;">
+                    <h3 style="margin-bottom: 15px; font-size: 1.5rem;">Quer alinhar seus investimentos a este cenário?</h3>
+                    <p style="margin-bottom: 25px; opacity: 0.9;">Converse diretamente com um planejador certificado CFP® e descubra como proteger e expandir seu patrimônio.</p>
+                    <a href="https://wa.me/5541996301116?text=Ol%C3%A1%2C%20Marcelo!%20Li%20seu%20artigo%20sobre%20a%20Selic%20e%20quero%20revisar%20meus%20investimentos." target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none; display: inline-block;">
+                        Agendar Conversa Estratégica <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+                    </a>
+                </div>
 
-                <h2>Prefixados e Inflação: A janela de oportunidade</h2>
-                <p>Com 24% da dívida atrelada a índices de preços e 21% prefixada, a gestão do Tesouro aponta para uma necessidade futura de alongamento dos prazos. O investidor que foca apenas no ganho fácil do CDI hoje perde a assimetria favorável dos prêmios em títulos de inflação (IPCA+).</p>
-
-                <p>Uma carteira blindada não tenta adivinhar o próximo movimento do Copom, mas se posiciona estruturalmente para garantir rentabilidade real acima da inflação, independentemente do ciclo político ou monetário.</p>
             </div>
-
-            <!-- CTA FINAL DO ARTIGO -->
-            <div class="article-cta">
-                <h3>Pronto para estruturar a sua blindagem?</h3>
-                <p>Não deixe seu patrimônio à mercê das oscilações de curto prazo. Agende uma conversa direta e vamos construir a rota segura para o seu legado.</p>
-                <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener noreferrer" class="btn-default">
-                    Simular meu Futuro <i class="fa-brands fa-whatsapp" style="margin-left: 10px;"></i>
-                </a>
-            </div>
-
-        </article>
+        </section>
     </main>
 
-    <!-- RODAPÉ COMPLIANCE -->
+    <!-- RODAPÉ IDÊNTICO AO INDEX.HTML -->
     <footer>
-        <div id="footer_items">
-            <span id="copyright">
-                &copy; 2026 Marcelo Patriotta. Todos os direitos reservados.
-            </span>
-            <p style="font-size: 0.75rem; color: var(--color-neutral-2); margin-top: 10px; max-width: 800px; text-align: center;">
-                Transparência: A marca CFP® e as marcas de certificação CERTIFIED FINANCIAL PLANNER pertencem ao Financial Planning Standards Board Ltd. (FPSB) fora dos Estados Unidos. A Planejar - Associação Brasileira de Planejamento Financeiro é a entidade afiliada ao FPSB autorizada a administrar as marcas no Brasil. Este conteúdo é estritamente educacional e não reflete o posicionamento de instituições financeiras nas quais o autor atue.
-            </p>
+        <div style="padding: 0 8%;">
+            <!-- BLOCO DE COMPLIANCE -->
+            <div style="font-size: 0.75rem; line-height: 1.4; opacity: 0.8; margin-bottom: 20px; text-align: left;">
+                <p style="margin-bottom: 10px;">
+                    <strong>Aviso Legal e Transparência:</strong> Este site possui caráter estritamente educacional e informativo. Marcelo Patriota atua como Planejador Financeiro Pessoal de forma independente. As opiniões e os serviços aqui apresentados são de responsabilidade exclusiva do autor e não refletem, sob nenhuma hipótese, as diretrizes, produtos ou o posicionamento institucional de seus empregadores ou de outras instituições financeiras.
+                </p>
+                <p>
+                    <strong>Marcas Registradas:</strong> A marca CFP® pertence ao Financial Planning Standards Board Ltd. (FPSB) fora do território norte-americano. A Planejar - Associação Brasileira de Planejamento Financeiro é a entidade autorizada pelo FPSB para a concessão e administração destas marcas no Brasil.
+                </p>
+            </div>
+
+            <div id="footer_items">
+                <span id="copyright">
+                    © 2026 Marcelo Patriotta. Todos os direitos reservados.
+                </span>
+
+                <div class="social-media-buttons">
+                    <a href="https://wa.me/5541996301116" rel="noopener noreferrer" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/marcelopatriotacfp" rel="noopener noreferrer" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- SCRIPT DO MENU MOBILE E ANIMAÇÕES -->
+    <!-- SCRIPT DO MENU MOBILE E GRÁFICO CHART.JS -->
     <script src="src/javascript/script.js"></script>
-</body>
-</html>
+    <script>
+        // Inicialização do Gráfico da Selic com Chart.js para manter a interatividade visual
+        const ctx = document.getElementById('selicChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Mar', 'Mai', 'Jul', 'Set', 'Nov', 'Jan', 'Mar', 'Mai', 'Jul', 'Set', 'Nov (Atual)'],
+                datasets: [{
+                    label: 'Taxa Selic Meta (%)',
+                    data: [11.75, 12.75, 13.25, 13.75, 13.75, 13.75, 13.75, 13.25, 12.50, 12.00, 13.00, 13.75],
+                    borderColor: '#1d4ed8',
+                    backgroundColor: 'rgba(29, 78, 216, 0.08)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: '#1d4ed8',
+                    pointBorderColor: '#ffffff',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: '#0f172a',
+                        titleFont
