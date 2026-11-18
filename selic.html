@@ -12,21 +12,39 @@
 </head>
 <body>
     
-    <!-- HEADER (O mesmo da página inicial, mas com links apontando de volta para o index) -->
+    <!-- HEADER (O mesmo da página inicial, com menu mobile, mas links apontando para o index) -->
     <header>
         <nav id="navbar">
             <a href="index.html#home" id="nav_logo">
-                <img src="src/images/logo.png" alt="Marcelo Patriotta - Planejador Financeiro CFP®" class="brand-logo">
+                <img src="src/images/logo-marcelo-patriotta.png" alt="Marcelo Patriotta - Planejador Financeiro CFP®" class="brand-logo">
             </a>
+            
             <ul id="nav_list">
                 <li class="nav-item"><a href="index.html#home">Início</a></li>
                 <li class="nav-item"><a href="index.html#menu">O Processo</a></li>
                 <li class="nav-item"><a href="index.html#planner">Sobre seu Planejador</a></li>
             </ul>
+            
             <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none;">
                 Inicie sua jornada aqui
             </a>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item"><a href="index.html#home">Início</a></li>
+                <li class="nav-item"><a href="index.html#menu">O Processo</a></li>
+                <li class="nav-item"><a href="index.html#planner">Sobre Seu Planejador</a></li>
+            </ul>
+
+            <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none; display: block; text-align: center; margin-top: 20px;">
+                Inicie sua Jornada
+            </a>
+        </div>
     </header>
 
     <!-- ÁREA DE LEITURA DO ARTIGO -->
@@ -43,7 +61,6 @@
                 
                 <div class="article-author">
                     <div class="author-avatar">
-                        <!-- Imagem opcional do seu rosto pequeno ao lado do nome -->
                         <i class="fa-solid fa-user-tie"></i> 
                     </div>
                     <div class="author-info">
@@ -95,5 +112,7 @@
         </div>
     </footer>
 
+    <!-- SCRIPT DO MENU MOBILE -->
+    <script src="src/javascript/script.js"></script>
 </body>
 </html>
