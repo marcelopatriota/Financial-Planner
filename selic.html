@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles/styles.css">
 
-    <!-- Chart.js para o gráfico de evolução da Selic -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     
@@ -15,17 +13,16 @@
 </head>
 <body>
     
-    <!-- CABEÇALHO IDÊNTICO AO INDEX.HTML -->
+    <!-- CABEÇALHO PADRONIZADO -->
     <header>
         <nav id="navbar">
-            <!-- LOGO COM LINK PARA A HOME -->
             <a href="index.html#home" id="nav_logo">
                 <img src="src/images/logo.png" alt="Marcelo Patriotta - Planejador Financeiro CFP®" class="brand-logo">
             </a>
 
             <ul id="nav_list">
                 <li class="nav-item">
-                    <a href="index.html#home">Início</a>
+                    <a href="index.html">Início</a>
                 </li>
                 <li class="nav-item">
                     <a href="index.html#menu">O Processo</a>
@@ -50,7 +47,7 @@
         <div id="mobile_menu">
             <ul id="mobile_nav_list">
                 <li class="nav-item">
-                    <a href="index.html#home">Início</a>
+                    <a href="index.html">Início</a>
                 </li>
                 <li class="nav-item">
                     <a href="index.html#menu">O Processo</a>
@@ -66,81 +63,109 @@
         </div>
     </header>
 
-    <!-- CONTEÚDO DO ARTIGO -->
-    <main id="content">
-        <section id="home" style="min-height: auto; padding-top: 40px; padding-bottom: 40px;">
-            <div style="max-width: 800px; margin: 0 auto; width: 100%;">
-                
-                <!-- Botão de Voltar -->
-                <div style="margin-bottom: 30px;">
-                    <a href="index.html#insights" style="text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
-                        <i class="fa-solid fa-arrow-left"></i> Voltar para os Insights
-                    </a>
-                </div>
-
-                <!-- Cabeçalho do Artigo -->
-                <div style="margin-bottom: 40px;">
-                    <span class="insight-tag" style="display: inline-block; margin-bottom: 12px;">Macroeconomia</span>
-                    <span class="insight-date" style="margin-left: 10px; color: var(--color-neutral-dark);">Nov 2026 • 6 min de leitura</span>
-                    <h1 class="title" style="font-size: 2.2rem; line-height: 1.2; margin-top: 10px; margin-bottom: 20px;">
-                        O impacto da Selic a 13,75% na composição da Dívida Pública
-                    </h1>
-                    <p class="description" style="font-size: 1.1rem; line-height: 1.6;">
-                        Uma análise profunda sobre o prêmio de risco, títulos prefixados e o reflexo real no portfólio do investidor de longo prazo diante do patamar atual dos juros.
-                    </p>
-                </div>
-
-                <!-- Bloco Interativo / Gráfico da Selic Corrigido -->
-                <div style="background: #ffffff; padding: 30px; border-radius: 16px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); margin-bottom: 40px;">
-                    <h3 style="margin-bottom: 10px; font-size: 1.2rem; color: #0f172a; font-weight: 700;">Evolução Histórica e Patamar Atual da Selic</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 20px; color: #475569; line-height: 1.5;">Acompanhamento do comportamento da taxa básica de juros e seu reflexo no custo de captação do governo.</p>
-    
-    <!-- Container com altura fixa garantida para o Chart.js -->
-    <div style="width: 100%; height: 320px; position: relative;">
-        <canvas id="selicChart" style="width: 100% !important; height: 320px !important;"></canvas>
-    </div>
-</div>
-
-                <!-- Corpo do Texto -->
-                <div class="texto" style="font-size: 1.05rem; line-height: 1.8; color: var(--color-neutral-dark);">
-                    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;">O Cenário de Juros Altos e a Dívida</h3>
-                    <p style="margin-bottom: 20px;">
-                        Quando a taxa Selic atinge patamares restritivos como 13,75%, o Tesouro Nacional enfrenta uma pressão imediata sobre o custo de rolagem da dívida pública federal. Como grande parte dos títulos é indexada à Selic (Tesouro Selic/LFT) ou pós-fixada, o custo de financiamento do Estado sobe na exata proporção da decisão do Copom.
-                    </p>
-                    <p style="margin-bottom: 20px;">
-                        Isso gera um efeito composto: o prêmio de risco exigido pelo mercado secundário para absorver títulos prefixados (LTN e NTN-F) se eleva, refletindo as incertezas fiscais e a inflação esperada no horizonte relevante.
-                    </p>
-
-                    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;">O que isso significa para o seu portfólio?</h3>
-                    <p style="margin-bottom: 20px;">
-                        Para o investidor pessoa física, o momento exige serenidade e foco estratégico. Embora a renda fixa pós-fixada ofereça retribuições nominais elevadas de dois dígitos sem volatilidade diária significativa, concentrar 100% do patrimônio nessa classe pode ser uma armadilha de custo de oportunidade quando o ciclo de queda de juros eventualmente se iniciar.
-                    </p>
-                    <p style="margin-bottom: 20px;">
-                        A construção de uma carteira robusta exige balanceamento: capturar taxas atrativas em prefixados ou híbridos (IPCA+) de longo prazo para blindar o poder de compra do <strong>eu do futuro</strong>, mantendo a liquidez necessária para imprevistos.
-                    </p>
-
-                    <blockquote style="border-left: 4px solid var(--color-primary, #1d4ed8); padding-left: 20px; margin: 30px 0; font-style: italic; opacity: 0.9;">
-                        "O investidor maduro não olha apenas para o rendimento nominal de hoje, mas para a consistência do seu planejamento ao longo dos ciclos econômicos." — Marcelo Patriotta, CFP®
-                    </blockquote>
-                </div>
-
-                <!-- Box de Chamada Final no Artigo -->
-                <div style="background: linear-gradient(135deg, #1e293b, #0f172a); color: white; padding: 35px; border-radius: 16px; margin-top: 50px; text-align: center;">
-                    <h3 style="margin-bottom: 15px; font-size: 1.5rem;">Quer alinhar seus investimentos a este cenário?</h3>
-                    <p style="margin-bottom: 25px; opacity: 0.9;">Converse diretamente com um planejador certificado CFP® e descubra como proteger e expandir seu patrimônio.</p>
-                    <a href="https://wa.me/5541996301116?text=Ol%C3%A1%2C%20Marcelo!%20Li%20seu%20artigo%20sobre%20a%20Selic%20e%20quero%20revisar%20meus%20investimentos." target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none; display: inline-block;">
-                        Agendar Conversa Estratégica <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
-                    </a>
-                </div>
-
+    <!-- CONTEÚDO PRINCIPAL DO ARTIGO -->
+    <main id="content" style="padding-top: 120px; padding-bottom: 80px;">
+        <div style="max-width: 800px; margin: 0 auto; width: 90%;">
+            
+            <!-- Botão de Voltar -->
+            <div style="margin-bottom: 30px;">
+                <a href="index.html#insights" style="text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; color: inherit;">
+                    <i class="fa-solid fa-arrow-left"></i> Voltar para os Insights
+                </a>
             </div>
-        </section>
+
+            <!-- Cabeçalho do Artigo -->
+            <div style="margin-bottom: 40px;">
+                <span class="insight-tag" style="display: inline-block; margin-bottom: 12px;">Macroeconomia</span>
+                <span class="insight-date" style="margin-left: 10px; opacity: 0.7;">Nov 2026 • 6 min de leitura</span>
+                <h1 style="font-size: 2.2rem; line-height: 1.2; margin-top: 10px; margin-bottom: 20px;">
+                    O impacto da Selic a 13,75% na composição da Dívida Pública
+                </h1>
+                <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.85;">
+                    Uma análise profunda sobre o prêmio de risco, títulos prefixados e o reflexo real no portfólio do investidor de longo prazo diante do patamar atual dos juros.
+                </p>
+            </div>
+
+            <!-- BLOCO VISUAL ESTÁVEL DA SELIC (Substitui o canvas em branco por dados visuais limpos) -->
+            <div style="background: #ffffff; padding: 30px; border-radius: 16px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); margin-bottom: 40px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                    <div>
+                        <h3 style="margin-bottom: 6px; font-size: 1.2rem; color: #0f172a; font-weight: 700;">Evolução Histórica e Patamar Atual da Selic</h3>
+                        <p style="font-size: 0.95rem; color: #475569; line-height: 1.5; margin: 0;">Acompanhamento do comportamento da taxa básica de juros e seu reflexo no custo de captação do governo.</p>
+                    </div>
+                    <span style="background: #eff6ff; color: #1d4ed8; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                        Atual: 13,75% a.a.
+                    </span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 25px;">
+                    <div style="background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                        <span style="display: block; font-size: 0.8rem; color: #64748b; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Pico do Ciclo</span>
+                        <span style="font-size: 1.4rem; font-weight: 700; color: #0f172a;">13,75%</span>
+                        <span style="display: block; font-size: 0.75rem; color: #059669; margin-top: 2px;">Patamar restritivo atual</span>
+                    </div>
+                    <div style="background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                        <span style="display: block; font-size: 0.8rem; color: #64748b; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Média Histórica</span>
+                        <span style="font-size: 1.4rem; font-weight: 700; color: #0f172a;">8,45%</span>
+                        <span style="display: block; font-size: 0.75rem; color: #475569; margin-top: 2px;">Ciclos de alta e baixa</span>
+                    </div>
+                    <div style="background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                        <span style="display: block; font-size: 0.8rem; color: #64748b; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Impacto Direto</span>
+                        <span style="font-size: 1.3rem; font-weight: 700; color: #1d4ed8;">Tesouro Selic</span>
+                        <span style="display: block; font-size: 0.75rem; color: #475569; margin-top: 2px;">Correção diária pós-fixada</span>
+                    </div>
+                </div>
+
+                <div style="background: #f1f5f9; padding: 20px; border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; color: #475569; margin-bottom: 8px;">
+                        <span>Juros Baixos (2%)</span>
+                        <span>Patamar Atual (13,75%)</span>
+                        <span>Teto (>14%)</span>
+                    </div>
+                    <div style="width: 100%; height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;">
+                        <div style="width: 92%; height: 100%; background: linear-gradient(90deg, #3b82f6, #1d4ed8); border-radius: 5px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corpo do Texto -->
+            <div style="font-size: 1.05rem; line-height: 1.8;">
+                <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;">O Cenário de Juros Altos e a Dívida</h3>
+                <p style="margin-bottom: 20px;">
+                    Quando a taxa Selic atinge patamares restritivos como 13,75%, o Tesouro Nacional enfrenta uma pressão imediata sobre o custo de rolagem da dívida pública federal. Como grande parte dos títulos é indexada à Selic (Tesouro Selic/LFT) ou pós-fixada, o custo de financiamento do Estado sobe na exata proporção da decisão do Copom.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Isso gera um efeito composto: o prêmio de risco exigido pelo mercado secundário para absorver títulos prefixados (LTN e NTN-F) se eleva, refletindo as incertezas fiscais e a inflação esperada no horizonte relevante.
+                </p>
+
+                <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;">O que isso significa para o seu portfólio?</h3>
+                <p style="margin-bottom: 20px;">
+                    Para o investidor pessoa física, o momento exige serenidade e foco estratégico. Embora a renda fixa pós-fixada ofereça retribuições nominais elevadas de dois dígitos sem volatilidade diária significativa, concentrar 100% do patrimônio nessa classe pode ser uma armadilha de custo de oportunidade quando o ciclo de queda de juros eventualmente se iniciar.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    A construção de uma carteira robusta exige balanceamento: capturar taxas atrativas em prefixados ou híbridos (IPCA+) de longo prazo para blindar o poder de compra do <strong>eu do futuro</strong>, mantendo a liquidez necessária para imprevistos.
+                </p>
+
+                <blockquote style="border-left: 4px solid #1d4ed8; padding-left: 20px; margin: 30px 0; font-style: italic; opacity: 0.9;">
+                    "O investidor maduro não olha apenas para o rendimento nominal de hoje, mas para a consistência do seu planejamento ao longo dos ciclos econômicos." — Marcelo Patriotta, CFP®
+                </blockquote>
+            </div>
+
+            <!-- Box de Chamada Final -->
+            <div style="background: linear-gradient(135deg, #1e293b, #0f172a); color: white; padding: 35px; border-radius: 16px; margin-top: 50px; text-align: center;">
+                <h3 style="margin-bottom: 15px; font-size: 1.5rem;">Quer alinhar seus investimentos a este cenário?</h3>
+                <p style="margin-bottom: 25px; opacity: 0.9;">Converse diretamente com um planejador certificado CFP® e descubra como proteger e expandir seu patrimônio.</p>
+                <a href="https://wa.me/5541996301116?text=Ol%C3%A1%2C%20Marcelo!%20Li%20seu%20artigo%20sobre%20a%20Selic%20e%20quero%20revisar%20meus%20investimentos." target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none; display: inline-block;">
+                    Agendar Conversa Estratégica <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+                </a>
+            </div>
+
+        </div>
     </main>
 
-    <!-- RODAPÉ IDÊNTICO AO INDEX.HTML -->
+    <!-- RODAPÉ PADRONIZADO -->
     <footer>
         <div style="padding: 0 8%;">
-            <!-- BLOCO DE COMPLIANCE -->
             <div style="font-size: 0.75rem; line-height: 1.4; opacity: 0.8; margin-bottom: 20px; text-align: left;">
                 <p style="margin-bottom: 10px;">
                     <strong>Aviso Legal e Transparência:</strong> Este site possui caráter estritamente educacional e informativo. Marcelo Patriota atua como Planejador Financeiro Pessoal de forma independente. As opiniões e os serviços aqui apresentados são de responsabilidade exclusiva do autor e não refletem, sob nenhuma hipótese, as diretrizes, produtos ou o posicionamento institucional de seus empregadores ou de outras instituições financeiras.
@@ -167,37 +192,6 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DO MENU MOBILE E GRÁFICO CHART.JS -->
     <script src="src/javascript/script.js"></script>
-    <script>
-        // Inicialização do Gráfico da Selic com Chart.js para manter a interatividade visual
-        const ctx = document.getElementById('selicChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Mar', 'Mai', 'Jul', 'Set', 'Nov', 'Jan', 'Mar', 'Mai', 'Jul', 'Set', 'Nov (Atual)'],
-                datasets: [{
-                    label: 'Taxa Selic Meta (%)',
-                    data: [11.75, 12.75, 13.25, 13.75, 13.75, 13.75, 13.75, 13.25, 12.50, 12.00, 13.00, 13.75],
-                    borderColor: '#1d4ed8',
-                    backgroundColor: 'rgba(29, 78, 216, 0.08)',
-                    borderWidth: 3,
-                    fill: true,
-                    tension: 0.3,
-                    pointBackgroundColor: '#1d4ed8',
-                    pointBorderColor: '#ffffff',
-                    pointBorderWidth: 2,
-                    pointRadius: 5,
-                    pointHoverRadius: 7
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: false
-                    },
-                    tooltip: {
-                        backgroundColor: '#0f172a',
-                        titleFont
+</body>
+</html>
