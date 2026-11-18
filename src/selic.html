@@ -1,55 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O impacto da Selic a 13,75% | Marcelo Patriotta</title>
+    <title>O impacto da Selic a 13,75% | Marcelo Patriotta CFP®</title>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="src/styles/style.css">
-    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     
-    <!-- HEADER (O mesmo da página inicial, mas com links apontando de volta para o index) -->
+    <!-- HEADER (Idêntico ao index.html, com caminhos apontando de volta para a Home e suas seções) -->
     <header>
         <nav id="navbar">
             <a href="index.html#home" id="nav_logo">
                 <img src="src/images/logo.png" alt="Marcelo Patriotta - Planejador Financeiro CFP®" class="brand-logo">
             </a>
+
             <ul id="nav_list">
-                <li class="nav-item"><a href="index.html#home">Início</a></li>
-                <li class="nav-item"><a href="index.html#menu">O Processo</a></li>
-                <li class="nav-item"><a href="index.html#planner">Sobre seu Planejador</a></li>
                 <li class="nav-item">
-                    <a href="#insights">Insights</a>
+                    <a href="index.html#home">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#biblioteca">Biblioteca</a>
+                    <a href="index.html#menu">O Processo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#planner">Sobre seu Planejador</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="index.html#insights">Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#biblioteca">Biblioteca</a>
                 </li>
             </ul>
-            <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none;">
-                Inicie sua jornada aqui
+
+            <a href="https://wa.me/5541996301116?text=Ol%C3%A1%2C%20Marcelo!%20Li%20seu%20artigo%20sobre%20a%20Selic%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+                Falar com o Planejador
             </a>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </nav>
+
+        <!-- MENU MOBILE -->
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="index.html#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#menu">O Processo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#planner">Sobre Seu Planejador</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#insights">Insights</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#biblioteca">Biblioteca</a>
+                </li>
+            </ul>
+
+            <a href="https://wa.me/5541996301116?text=Ol%C3%A1%2C%20Marcelo!%20Li%20seu%20artigo%20sobre%20a%20Selic." target="_blank" rel="noopener noreferrer" class="btn-default" style="text-decoration: none; display: inline-block; text-align: center;">
+                Falar com o Planejador
+            </a>
+        </div>
     </header>
 
     <!-- ÁREA DE LEITURA DO ARTIGO -->
     <main id="article-page">
         <article class="full-article">
             
+            <!-- Botão de Voltar -->
+            <div style="margin-bottom: 25px;">
+                <a href="index.html#insights" class="btn-link">
+                    <i class="fa-solid fa-arrow-left"></i> Voltar para os Insights
+                </a>
+            </div>
+
             <header class="article-header">
                 <div class="article-meta">
                     <span class="insight-tag">Macroeconomia</span>
-                    <span class="insight-date">Novembro 2026</span>
+                    <span class="insight-date" style="margin-left: 10px;">Novembro 2026</span>
                 </div>
                 <h1>O impacto da Selic a 13,75% na composição da Dívida Pública e no seu Portfólio</h1>
                 <p class="article-subtitle">Uma análise sobre o prêmio de risco real, a atratividade dos títulos atrelados à inflação e por que a manchete do déficit não conta a história inteira.</p>
                 
                 <div class="article-author">
                     <div class="author-avatar">
-                        <!-- Imagem opcional do seu rosto pequeno ao lado do nome -->
                         <i class="fa-solid fa-user-tie"></i> 
                     </div>
                     <div class="author-info">
@@ -81,7 +125,7 @@
             <div class="article-cta">
                 <h3>Pronto para estruturar a sua blindagem?</h3>
                 <p>Não deixe seu patrimônio à mercê das oscilações de curto prazo. Agende uma conversa direta e vamos construir a rota segura para o seu legado.</p>
-                <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener noreferrer" class="btn-default">
+                <a href="https://wa.me/5541996301116?text=Ol%C3%A1%2C%20Marcelo!%20Li%20seu%20artigo%20sobre%20a%20Selic%20e%20quero%20revisar%20meus%20investimentos." target="_blank" rel="noopener noreferrer" class="btn-default" style="margin: 0 auto; display: inline-flex;">
                     Simular meu Futuro <i class="fa-brands fa-whatsapp" style="margin-left: 10px;"></i>
                 </a>
             </div>
@@ -89,17 +133,36 @@
         </article>
     </main>
 
-    <!-- RODAPÉ COMPLIANCE -->
+    <!-- RODAPÉ COMPLIANCE PADRONIZADO -->
     <footer>
-        <div id="footer_items">
-            <span id="copyright">
-                &copy; 2026 Marcelo Patriotta. Todos os direitos reservados.
-            </span>
-            <p style="font-size: 0.75rem; color: var(--color-neutral-2); margin-top: 10px; max-width: 800px; text-align: center;">
-                Transparência: A marca CFP® e as marcas de certificação CERTIFIED FINANCIAL PLANNER pertencem ao Financial Planning Standards Board Ltd. (FPSB) fora dos Estados Unidos. A Planejar - Associação Brasileira de Planejamento Financeiro é a entidade afiliada ao FPSB autorizada a administrar as marcas no Brasil. Este conteúdo é estritamente educacional e não reflete o posicionamento de instituições financeiras nas quais o autor atue.
-            </p>
+        <div style="padding: 0 8%;">
+            <div style="font-size: 0.75rem; line-height: 1.4; opacity: 0.8; margin-bottom: 20px; text-align: left;">
+                <p style="margin-bottom: 10px;">
+                    <strong>Aviso Legal e Transparência:</strong> Este site possui caráter estritamente educacional e informativo. Marcelo Patriota atua como Planejador Financeiro Pessoal de forma independente. As opiniões e os serviços aqui apresentados são de responsabilidade exclusiva do autor e não refletem, sob nenhuma hipótese, as diretrizes, produtos ou o posicionamento institucional de seus empregadores ou de outras instituições financeiras.
+                </p>
+                <p>
+                    <strong>Marcas Registradas:</strong> A marca CFP® pertence ao Financial Planning Standards Board Ltd. (FPSB) fora do território norte-americano. A Planejar - Associação Brasileira de Planejamento Financeiro é a entidade autorizada pelo FPSB para a concessão e administração destas marcas no Brasil.
+                </p>
+            </div>
+
+            <div id="footer_items">
+                <span id="copyright">
+                    &copy; 2026 Marcelo Patriotta. Todos os direitos reservados.
+                </span>
+
+                <div class="social-media-buttons">
+                    <a href="https://wa.me/5541996301116" rel="noopener noreferrer" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/marcelopatriotacfp" rel="noopener noreferrer" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Script global de interatividade -->
+    <script src="src/javascript/script.js"></script>
 </body>
 </html>
