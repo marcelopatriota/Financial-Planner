@@ -86,48 +86,48 @@
                 </p>
             </div>
 
-            <!-- BLOCO VISUAL ESTÁVEL DA SELIC (Substitui o canvas em branco por dados visuais limpos) -->
-            <div style="background: #ffffff; padding: 30px; border-radius: 16px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); margin-bottom: 40px;">
+<!-- BLOCO VISUAL DA SELIC INTEGRADO À PÁGINA -->
+            <div style="background: var(--color-neutral-light, #f8fafc); padding: 30px; border-radius: 16px; border: 1px solid rgba(0,0,0,0.06); margin-bottom: 40px;">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
                     <div>
-                        <h3 style="margin-bottom: 6px; font-size: 1.2rem; color: #0f172a; font-weight: 700;">Evolução Histórica e Patamar Atual da Selic</h3>
-                        <p style="font-size: 0.95rem; color: #475569; line-height: 1.5; margin: 0;">Acompanhamento do comportamento da taxa básica de juros e seu reflexo no custo de captação do governo.</p>
+                        <h3 style="margin-bottom: 6px; font-size: 1.2rem; font-weight: 700;">Evolução Histórica e Patamar Atual da Selic</h3>
+                        <p style="font-size: 0.95rem; opacity: 0.8; line-height: 1.5; margin: 0;">Acompanhamento do comportamento da taxa básica de juros e seu reflexo no custo de captação do governo.</p>
                     </div>
-                    <span style="background: #eff6ff; color: #1d4ed8; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                    <span style="background: rgba(29, 78, 216, 0.1); color: var(--color-primary, #1d4ed8); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
                         Atual: 13,75% a.a.
                     </span>
                 </div>
 
+                <!-- Mini-cards internos usando fundo transparente/neutro -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 25px;">
-                    <div style="background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0;">
-                        <span style="display: block; font-size: 0.8rem; color: #64748b; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Pico do Ciclo</span>
-                        <span style="font-size: 1.4rem; font-weight: 700; color: #0f172a;">13,75%</span>
+                    <div style="background: rgba(255, 255, 255, 0.6); padding: 16px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
+                        <span style="display: block; font-size: 0.8rem; opacity: 0.7; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Pico do Ciclo</span>
+                        <span style="font-size: 1.4rem; font-weight: 700;">13,75%</span>
                         <span style="display: block; font-size: 0.75rem; color: #059669; margin-top: 2px;">Patamar restritivo atual</span>
                     </div>
-                    <div style="background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0;">
-                        <span style="display: block; font-size: 0.8rem; color: #64748b; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Média Histórica</span>
-                        <span style="font-size: 1.4rem; font-weight: 700; color: #0f172a;">8,45%</span>
-                        <span style="display: block; font-size: 0.75rem; color: #475569; margin-top: 2px;">Ciclos de alta e baixa</span>
+                    <div style="background: rgba(255, 255, 255, 0.6); padding: 16px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
+                        <span style="display: block; font-size: 0.8rem; opacity: 0.7; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Média Histórica</span>
+                        <span style="font-size: 1.4rem; font-weight: 700;">8,45%</span>
+                        <span style="display: block; font-size: 0.75rem; opacity: 0.7; margin-top: 2px;">Ciclos de alta e baixa</span>
                     </div>
-                    <div style="background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0;">
-                        <span style="display: block; font-size: 0.8rem; color: #64748b; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Impacto Direto</span>
-                        <span style="font-size: 1.3rem; font-weight: 700; color: #1d4ed8;">Tesouro Selic</span>
-                        <span style="display: block; font-size: 0.75rem; color: #475569; margin-top: 2px;">Correção diária pós-fixada</span>
+                    <div style="background: rgba(255, 255, 255, 0.6); padding: 16px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
+                        <span style="display: block; font-size: 0.8rem; opacity: 0.7; font-weight: 600; text-transform: uppercase; margin-bottom: 4px;">Impacto Direto</span>
+                        <span style="font-size: 1.3rem; font-weight: 700; color: var(--color-primary, #1d4ed8);">Tesouro Selic</span>
+                        <span style="display: block; font-size: 0.75rem; opacity: 0.7; margin-top: 2px;">Correção diária pós-fixada</span>
                     </div>
                 </div>
 
-                <div style="background: #f1f5f9; padding: 20px; border-radius: 12px;">
-                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; color: #475569; margin-bottom: 8px;">
+                <div style="background: rgba(255, 255, 255, 0.5); padding: 20px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.04);">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; opacity: 0.8; margin-bottom: 8px;">
                         <span>Juros Baixos (2%)</span>
                         <span>Patamar Atual (13,75%)</span>
                         <span>Teto (>14%)</span>
                     </div>
-                    <div style="width: 100%; height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden;">
-                        <div style="width: 92%; height: 100%; background: linear-gradient(90deg, #3b82f6, #1d4ed8); border-radius: 5px;"></div>
+                    <div style="width: 100%; height: 10px; background: rgba(0,0,0,0.06); border-radius: 5px; overflow: hidden;">
+                        <div style="width: 92%; height: 100%; background: linear-gradient(90deg, #3b82f6, var(--color-primary, #1d4ed8)); border-radius: 5px;"></div>
                     </div>
                 </div>
             </div>
-
             <!-- Corpo do Texto -->
             <div style="font-size: 1.05rem; line-height: 1.8;">
                 <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem;">O Cenário de Juros Altos e a Dívida</h3>
